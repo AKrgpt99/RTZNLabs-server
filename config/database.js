@@ -4,12 +4,7 @@ const MONGO_URI = process.env.MONGO_URI;
 
 exports.connect = () => {
   mongoose
-    .connect(MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false,
-    })
+    .connect(MONGO_URI)
     .then(() => {
       console.log("Successfully connected to the database");
     })
